@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+
+    {{ encore_entry_link_tags('homepage') }}
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <article class="overlay overlay-dark">
+            <div class="row">
+                <h1>Lorem Ipsum</h1>
+                <label class="switch">
+                    <input type="checkbox" id="js-dark-mode-toggle" {{ random(['checked', '']) }}>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer venenatis,
+                dolor accumsan bibendum iaculis, mauris libero convallis justo, non rhoncus
+                sapien quam non risus. Proin eget consequat nulla. Nullam eget arcu risus.
+                Proin dignissim ante non scelerisque pharetra. Sed a lectus vitae tellus
+                semper finibus. Ut vel quam fringilla, lacinia neque vel, placerat velit.
+                Sed gravida congue lorem, eget tincidunt ante gravida et. Nam ac lacinia dui.
+            </p>
+            <p>
+                Nunc sapien neque, mattis ut lectus vel, efficitur suscipit lorem. Quisque
+                non posuere nisi. Sed eget magna vulputate, mollis arcu eu, luctus massa.
+                Morbi vulputate urna dolor, nec scelerisque leo volutpat vitae. Integer
+                pharetra massa a lectus ornare egestas. Fusce scelerisque arcu massa, eget
+                tristique quam tincidunt eget. Sed tellus augue, elementum ac pretium eget,
+                elementum et ligula. Nullam vestibulum ex in elit varius bibendum. Donec sit
+                amet molestie mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Vestibulum nec justo lorem. Donec sagittis nisi felis, at malesuada nisl
+                lobortis mollis. Nulla facilisi. Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. In et tortor vitae felis mollis suscipit non vitae felis.
+                Maecenas id purus et velit laoreet aliquam.
+            </p>
+            <p>
+                Cras eu dignissim quam, at fringilla tellus. Donec suscipit mi ac consectetur
+                varius. Vivamus eros nisi, pretium sit amet magna lobortis, mattis venenatis
+                nisi. Suspendisse iaculis facilisis vulputate. Nulla ornare eros non ex gravida
+                ultrices. Proin commodo elit in metus laoreet dapibus. Fusce accumsan bibendum
+                lectus vitae vestibulum. Suspendisse a semper justo, sit amet scelerisque arcu.
+                Duis pulvinar nisi sed aliquam feugiat.
+            </p>
+            <p>
+                Donec vitae malesuada ex, vitae rutrum quam. Sed rhoncus felis dui, vitae
+                commodo massa scelerisque eu. Fusce quis justo rutrum, elementum libero sed,
+                volutpat velit. Aenean eleifend blandit mi, in facilisis nibh pellentesque eget.
+                Aliquam mi enim, facilisis id lobortis et, aliquet in dolor. Sed vitae justo
+                consequat, convallis velit vitae, pulvinar enim. Sed ultrices justo ornare mauris
+                porttitor facilisis. Praesent pharetra magna nisi, vitae finibus ipsum rutrum non.
+                Nam sit amet luctus lacus. Vestibulum varius tristique congue. Suspendisse dui
+                metus, facilisis id viverra quis, maximus a ipsum.
+            </p>
+            <p>
+                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+                curae; Nam auctor, justo vitae finibus pulvinar, nibh urna convallis eros, sodales
+                ultrices sem nunc in est. Quisque a velit et urna tincidunt rutrum. Maecenas aliquam
+                ipsum velit. Fusce ac odio nec purus fermentum bibendum. Duis at ipsum vitae elit
+                posuere bibendum. Fusce blandit nec dolor sit amet tempus. Praesent venenatis,
+                nisl in semper porttitor, eros mauris venenatis magna, in suscipit mauris urna eu
+                sapien. Sed et facilisis dui. Suspendisse viverra ante et nisl tristique accumsan a
+                ac velit. Donec quis mauris risus. Phasellus eu urna porta, vehicula nisl eu,
+                feugiat enim. Morbi vitae augue consectetur, congue lacus vitae, viverra urna.
+            </p>
+        </article>
+    </div>
+
+    <a id="photo-credit"
+       class="overlay overlay-dark"
+       href="https://unsplash.com"
+       target="_blank"
+       rel="noopener noreferrer">
+        Photos from Unsplash
+    </a>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    {{ encore_entry_script_tags('homepage') }}
+{% endblock %}
