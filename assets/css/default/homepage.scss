@@ -6,11 +6,6 @@ $overlayTextDark: #e2e2e2;
 $overlayTextLight: #272727;
 
 html {
-    /*
-        You can swap these two lines to get random images. This can help
-        with testing overlays and appearances with a large number of images.
-     */
-    //background: url('../../images/default/homepage/ryan-cheng-uqYy29Sfb8Q-unsplash.jpg') no-repeat fixed bottom;
     background: url('https://source.unsplash.com/random') no-repeat fixed bottom;
 
     background-size: cover;
@@ -34,36 +29,49 @@ html {
         border-radius: .25rem;
         box-shadow: 0 0 .2rem .2rem rgba(0, 0, 0, 0.2) inset;
         padding: .75rem 1rem;
-        color: $overlayTextDark;
         transition: .2s linear;
     }
 
     .overlay-dark {
-        background: rgba(0, 0, 10, 0.5);
+        background: rgba(0, 0, 10, 0.6);
         color: $overlayTextDark;
+
+        a {
+            &:visited {
+                color: darken($overlayTextDark, 20);
+            }
+
+            &:hover {
+                color: lighten($overlayTextDark, 20);
+            }
+        }
     }
 
     .overlay-light {
-        background: rgba(255, 255, 255, 0.5);
+        background: rgba(255, 255, 255, 0.6);
         color: $overlayTextLight;
+
+        a {
+            &:visited {
+                color: lighten($overlayTextLight, 20);
+            }
+
+            &:hover {
+                color: darken($overlayTextLight, 20);
+            }
+        }
     }
 
-    a#photo-credit {
+    span#photo-credit {
         position: absolute;
         bottom: 1rem;
         left: 1rem;
-        display: inline-block;
         padding: .5rem .6rem;
-        text-decoration: none;
-        font-size: 14px;
         line-height: .8rem;
+        font-size: 14px;
 
-        &:visited {
-            color: darken($overlayTextDark, 20);
-        }
-
-        &:hover {
-            color: lighten($overlayTextDark, 20);
+        a {
+            text-decoration: none;
         }
     }
 
